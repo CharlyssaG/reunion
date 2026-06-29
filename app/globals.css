@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --star-1: #ffff99;
+  --star-2: #99ffff;
+  --neon-pink: #ff69b4;
+  --neon-cyan: #00ffff;
+  --neon-yellow: #ffff00;
+  --neon-green: #00ff00;
+  --deep-space: #000818;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--deep-space);
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  cursor: default;
+}
+
+/* ── STARFIELD ─────────────────────────────────── */
+.starfield {
+  background:
+    radial-gradient(1px 1px at 10% 15%, #fff 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 40%, #fff 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 8%,  #fff 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 60%, #fff 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 25%, #fff 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 75%, #fff 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 80%, #fff 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 45%, #fff 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 90%, #fff 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 5%,  #fff 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 5%  50%, #ffff99 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 48% 30%, #99ffff 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 75% 88%, #ffccff 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 92% 12%, #ffff99 0%, transparent 100%),
+    radial-gradient(2px 2px at 20% 65%, #ffffff 0%, transparent 100%),
+    radial-gradient(2px 2px at 65% 50%, #ffffff 0%, transparent 100%),
+    #000818;
+}
+
+/* ── WORDART ───────────────────────────────────── */
+.wordart {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+  font-weight: 900;
+  background: linear-gradient(180deg, #ffff00 0%, #ff8c00 40%, #ff0000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(3px 3px 0px rgba(0,0,0,0.8));
+  letter-spacing: -0.02em;
+}
+
+.wordart-blue {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+  font-weight: 900;
+  background: linear-gradient(180deg, #00ffff 0%, #0080ff 50%, #8800ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(3px 3px 0px rgba(0,0,0,0.8));
+}
+
+.wordart-rainbow {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ff0000, #ff8c00, #ffff00, #00ff00, #00ffff, #8800ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(2px 2px 0px rgba(0,0,0,0.9));
+}
+
+/* ── WIN95 WINDOW ──────────────────────────────── */
+.win95 {
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  color: #000;
+}
+
+.win95-title {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.win95-btn {
+  background: #c0c0c0;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #808080;
+  border-bottom: 1px solid #808080;
+  font-size: 10px;
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+.win95-inset {
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background: white;
+  padding: 8px;
+}
+
+/* ── NEON GLOW ─────────────────────────────────── */
+.neon-cyan  { color: #00ffff; text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ccff; }
+.neon-pink  { color: #ff69b4; text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 40px #ff00aa; }
+.neon-yellow{ color: #ffff00; text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 40px #ffcc00; }
+.neon-green { color: #00ff00; text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00cc00; }
+
+.neon-border-cyan  { border: 1px solid #00ffff; box-shadow: 0 0 8px #00ffff, inset 0 0 8px rgba(0,255,255,0.05); }
+.neon-border-pink  { border: 1px solid #ff69b4; box-shadow: 0 0 8px #ff69b4, inset 0 0 8px rgba(255,105,180,0.05); }
+.neon-border-yellow{ border: 1px solid #ffff00; box-shadow: 0 0 8px #ffff00, inset 0 0 8px rgba(255,255,0,0.05); }
+
+/* ── MARQUEE ───────────────────────────────────── */
+.marquee-wrap { overflow: hidden; white-space: nowrap; }
+.marquee-inner { display: inline-block; animation: marquee 18s linear infinite; }
+
+/* ── SCANLINE ──────────────────────────────────── */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.08) 2px,
+    rgba(0,0,0,0.08) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── DESTINATION CARD ──────────────────────────── */
+.dest-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.dest-card:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* ── FORM FIELDS ───────────────────────────────── */
+.retro-input {
+  background: #000;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  font-family: 'Courier New', monospace;
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+  box-shadow: 0 0 6px #00ffff;
+  font-size: 14px;
+}
+.retro-input:focus {
+  box-shadow: 0 0 12px #00ffff, 0 0 24px rgba(0,255,255,0.3);
+}
+.retro-input::placeholder { color: #006666; }
+
+.retro-select {
+  background: #000;
+  border: 1px solid #ff69b4;
+  color: #ff69b4;
+  font-family: 'Courier New', monospace;
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+  box-shadow: 0 0 6px #ff69b4;
+  font-size: 14px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.retro-textarea {
+  background: #000;
+  border: 1px solid #ffff00;
+  color: #ffff00;
+  font-family: 'Courier New', monospace;
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+  box-shadow: 0 0 6px #ffff00;
+  font-size: 14px;
+  resize: vertical;
+  min-height: 100px;
+}
+.retro-textarea:focus {
+  box-shadow: 0 0 12px #ffff00, 0 0 24px rgba(255,255,0,0.2);
+}
+
+.retro-btn {
+  background: linear-gradient(180deg, #ff69b4, #cc0066);
+  border: none;
+  color: white;
+  font-family: 'Comic Sans MS', cursive;
+  font-weight: 900;
+  font-size: 18px;
+  padding: 12px 36px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  box-shadow: 0 0 16px #ff69b4, 3px 3px 0px #660033;
+  transition: all 0.1s;
+  letter-spacing: 0.05em;
+}
+.retro-btn:hover {
+  box-shadow: 0 0 28px #ff69b4, 3px 3px 0px #660033;
+  transform: translateY(-1px);
+}
+.retro-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 8px #ff69b4, 1px 1px 0px #660033;
+}
+
+/* ── DIVIDERS ──────────────────────────────────── */
+.rainbow-hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(90deg, #ff0000, #ff8c00, #ffff00, #00ff00, #00ffff, #8800ff, #ff0000);
+  margin: 0;
+}
+
+/* ── UNDER CONSTRUCTION ────────────────────────── */
+@keyframes spin-z {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.spin { animation: spin-z 4s linear infinite; display: inline-block; }
+
+/* ── COUNTER DIGITS ────────────────────────────── */
+.digit-display {
+  font-family: 'Courier New', monospace;
+  font-size: 24px;
+  color: #00ff00;
+  background: #000;
+  border: 1px solid #00ff00;
+  padding: 4px 8px;
+  display: inline-block;
+  text-shadow: 0 0 8px #00ff00;
+  letter-spacing: 0.1em;
+}
