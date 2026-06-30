@@ -3,7 +3,7 @@
 create table if not exists reunion_votes (
   id           bigint generated always as identity primary key,
   name         text not null,
-  destination  text not null check (destination in ('michigan', 'alaska', 'caribbean')),
+  destination  text not null check (destination in ('michigan', 'roughcreek', 'alaska', 'caribbean')),
   comment      text,
   created_at   timestamptz default now()
 );

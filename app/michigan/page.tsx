@@ -118,7 +118,7 @@ export default function Michigan() {
           </div>
           <div className="p-4">
             <div className="win95-inset font-mono text-sm leading-7 text-black">
-              <p>The cheapskates want value. The Leisslers want nice things. This option is the only one where BOTH are true.</p>
+              <p>Some of us are watching the budget. Some of us want to splurge. This option is the only one where BOTH are genuinely true at the same time.</p>
               <br/>
               <p>Splitting a private resort 17 ways = cheaper per person than individual motel rooms. The math literally works in everyone's favor — and you get a full lakefront property instead of a Days Inn.</p>
               <br/>

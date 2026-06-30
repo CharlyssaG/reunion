@@ -3,11 +3,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const links = [
-  { href: '/',           label: '🏠 Home' },
-  { href: '/michigan',   label: '🌊 Michigan' },
-  { href: '/alaska',     label: '🏔️ Alaska' },
-  { href: '/caribbean',  label: '🌴 Caribbean' },
-  { href: '/vote',       label: '🗳️ Vote!' },
+  { href: '/',            label: '🏠 Home' },
+  { href: '/michigan',    label: '🌊 Michigan' },
+  { href: '/roughcreek',  label: '🤠 Texas' },
+  { href: '/alaska',      label: '🏔️ Alaska' },
+  { href: '/caribbean',   label: '🌴 Caribbean' },
+  { href: '/vote',        label: '🗳️ Vote!' },
 ]
 
 export default function Nav() {

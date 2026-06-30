@@ -1,4 +1,6 @@
 'use client'
+export const dynamic = 'force-dynamic'
+
 import { useState, useEffect } from 'react'
 import Nav from '@/components/Nav'
 import { supabase } from '@/lib/supabase'
@@ -7,6 +9,7 @@ type Vote = { id: number; name: string; destination: string; comment: string | n
 
 const DESTINATIONS = [
   { value: 'michigan',   label: '🌊 Northern Michigan',   sub: 'Sleeping Bear Resort · July 2028' },
+  { value: 'roughcreek', label: '🤠 Rough Creek Lodge',   sub: 'Glen Rose, Texas · Summer 2028' },
   { value: 'alaska',     label: '🏔️ Alaska Cruise',        sub: 'Inside Passage · June 2028' },
   { value: 'caribbean',  label: '🌴 Caribbean Cruise',     sub: 'Eastern Caribbean · Jan–Mar 2028' },
 ]
@@ -22,9 +25,10 @@ const NAMES = [
 ]
 
 const COLOR_MAP: Record<string, string> = {
-  michigan:  'text-cyan-300',
-  alaska:    'text-yellow-300',
-  caribbean: 'text-pink-300',
+  michigan:   'text-cyan-300',
+  roughcreek: 'text-yellow-300',
+  alaska:     'text-pink-300',
+  caribbean:  'text-cyan-300',
 }
 
 export default function Vote() {
@@ -191,9 +195,10 @@ export default function Vote() {
                 <div className="h-4 bg-black/50 border border-white/10 overflow-hidden">
                   <div
                     className={`h-full transition-all duration-700 ${
-                      t.value === 'michigan'  ? 'bg-cyan-500' :
-                      t.value === 'alaska'    ? 'bg-yellow-400' :
-                                                'bg-pink-500'}`}
+                      t.value === 'michigan'   ? 'bg-cyan-500' :
+                      t.value === 'roughcreek' ? 'bg-yellow-400' :
+                      t.value === 'alaska'     ? 'bg-pink-500' :
+                                                 'bg-cyan-400'}`}
                     style={{ width: `${(t.count / maxVotes) * 100}%` }}
                   />
                 </div>
